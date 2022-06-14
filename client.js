@@ -20,13 +20,13 @@ const connect = function() {
     console.log("Connection successfully established");
     conn.write("Name: ZP");
     
-    setTimeout(()=>{
+    setInterval(()=>{
       conn.write("Move: up");
-    }, 1000);
+    }, 500);
 
-    setTimeout(()=>{
-      conn.write("Move: right");
-    }, 3000);
+    setInterval(()=>{
+      conn.write("Move: up");
+    }, 1500);
 
   });
 

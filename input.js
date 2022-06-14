@@ -8,12 +8,11 @@ const setupInput = function(conn) {
   stdin.on("data", handleUserInput);
   
   return stdin;
+};
   
 
-};
-
 const handleUserInput = function(key) {
-    
+
   if (key === '\u0003') {
     process.exit();
   }
@@ -43,6 +42,7 @@ const handleUserInput = function(key) {
   }
   
 };
+
 
 let connection;
 

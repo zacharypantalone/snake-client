@@ -6,6 +6,10 @@ const connect = function() {
     port: 50541,
   });
 
+  //conn.on("connect", () => {
+    
+  //});
+
   
 
   conn.on("data", (data) => {
@@ -15,7 +19,18 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Connection successfully established");
     conn.write("Name: ZP");
+    
+    setTimeout(()=>{
+      conn.write("Move: up");
+    }, 1000);
+
+    setTimeout(()=>{
+      conn.write("Move: right");
+    }, 3000);
+
   });
+
+  
 
 
 

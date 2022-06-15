@@ -43,7 +43,6 @@ const handleUserInput = function(key) {
   
 };
 
-
 let connection;
 
 module.exports = setupInput;

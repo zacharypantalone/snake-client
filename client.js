@@ -7,26 +7,26 @@ const connect = function() {
     port: PORT,
   });
     
-  
   conn.on("data", (data) => {
     console.log("", data);
   });
     
-
   conn.on("connect", () => {
     console.log("Connection successfully established");
     conn.write("Name: ZP");
   });
-    
-    
+
   // this inteprets incoming data as text
   conn.setEncoding("utf8");
-
   return conn;
 };
-
-
+  
+    
+    
 module.exports = { connect };
+  
+
+
 
 
   
